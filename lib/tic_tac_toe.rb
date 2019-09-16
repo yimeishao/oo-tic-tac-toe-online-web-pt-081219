@@ -10,7 +10,7 @@ WIN_COMBINATIONS = [
     [6,4,2]
   ]
 
-def initialize(board)
+def initialize()
   @board = Array.new(9, " ")
 end
 
@@ -21,13 +21,8 @@ def display_board
     puts "-----------"
     puts " #{board[6]} | #{board[7]} | #{board[8]} "
   end
-
-def input_to_index(input)
-        user_input = input.to_i
-        user_input -= 1
-    end
-
-def move(board_index, token = "X") 
+  
+  def move(board_index, token = "X") 
         @board[board_index] = token
     end
 
