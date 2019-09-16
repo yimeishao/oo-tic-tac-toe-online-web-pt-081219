@@ -22,6 +22,11 @@ def display_board
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
   
+  def input_to_index(input)
+        user_input = input.to_i
+        user_input -= 1
+    end
+    
   def move(board_index, token = "X") 
         @board[board_index] = token
     end
